@@ -1,0 +1,49 @@
+{% extends "Basic.html" %}
+
+{% block title %}
+    Edit Book
+{% endblock %}
+
+{% block content %}
+
+<div class = "container p-3" >
+
+    <h2>Update Book Details Here</h2><br/>
+
+    <form action="" method="post">
+
+        {% csrf_token %}
+
+        Book Name <input type="text" value="{{book.BookName}}" name="tbbookname" class = "form-control" placeholder = "Enter book name here"/><br/>
+
+        Book Description <input type="text" value="{{book.BookDiscription}}" name="tbdes" class = "form-control" placeholder = "Enter book description here"/><br/>
+
+        Publication Date <input type="date" value = "{{book.BookPublishedOn}}" name="tbdate" class = "form-control" placeholder = "Enter book publication date here"/><br/><br/>
+
+        Book Price <input type="number" value = "{{book.BookPrice}}" name="tbprice" class = "form-control" placeholder = "Enter book price here"/><br/><br/>
+
+        Phone <input type="text"  value="{{author.AuthorPhone}}" name="tbphone" class = "form-control" placeholder = "Enter your phone number here"/><br/>
+
+        Book Category <select name="ddlcategory" class = "form-control">
+        <option selected>{{book.Bookcategory.CategoryName}}</option>
+        <option>--SELECT--</option>
+        {% for category in categories %}
+            <option>{{category.CategoryName }}</option>
+        {% endfor %}
+        </select><br/><br/>
+
+        Author Name <select name="ddlauthor" class = "form-control">
+        <option selected>{{book.BookAuthor.AuthorName}}</option>
+        <option>--SELECT--</option>
+        {% for author in authornames %}
+            <option>{{authornames.AuthorName }}</option>
+        {% endfor %}
+        </select><br/><br/>
+
+        <input class = " btn btn-warning form-control" type = "submit" value = "Edit Book">
+
+    </form>
+
+</div>
+
+{% endblock %}

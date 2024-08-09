@@ -1,0 +1,46 @@
+{% extends "Basic.html" %}
+
+{% block title %}
+    Edit Author
+{% endblock %}
+
+{% block content %}
+
+<div class = "container p-3" >
+
+    <h2>Update Author Details Here</h2><br/>
+
+    <form action="" method="post">
+
+        {% csrf_token %}
+
+        Name <input type="text" value="{{author.AuthorName}}" name="tbaname" class = "form-control" placeholder = "Enter your name here"/><br/>
+
+        DOB <input type="date" value="{{author.AuthorDob}}" name="tbadob" class = "form-control" placeholder = "Enter your dob here"/><br/>
+
+        Gender <select name="ddlgender" class = "form-control">
+        <option selected>{{author.AuthorGender}}</option>
+        <option>--SELECT--</option>
+        <option>Male</option>
+        <option>FeMale</option>
+        </select><br/>
+
+        Email <input type="text" value="{{author.AuthorEmail}}" name="tbemail" class = "form-control" placeholder = "Enter your email here"><br/>
+
+        Phone <input type="text"  value="{{author.AuthorPhone}}" name="tbphone" class = "form-control" placeholder = "Enter your phone number here"/><br/>
+
+        City <select name="ddlcity" class = "form-control">
+        <option selected>{{author.AuthorCity.CityName}}</option>
+        <option>--SELECT--</option>
+        {% for city in cities %}
+            <option>{{city.CityName}}</option>
+        {% endfor %}
+        </select><br/>
+
+        <input class = " btn btn-warning form-control" type = "submit" value = "Edit Author">
+
+    </form>
+
+</div>
+
+{% endblock %}
