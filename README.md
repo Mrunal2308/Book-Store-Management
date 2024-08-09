@@ -50,7 +50,7 @@ Follow these steps to set up the project on your local machine.
 
 Clone the repository to your local machine using the following command:
 ````bash
-git clone https://github.com/Mrunal2308/Book-Store-Management.git
+git clone https://github.com/mrunal-rajgolkar/Book-Store-Management.git
 ````
 
 
