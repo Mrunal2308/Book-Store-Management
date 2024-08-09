@@ -79,7 +79,10 @@ pip install -r requirements.txt
 
 
 
-**Configuration**
+
+
+
+**Configuration:**
 
 **1. Set Up the MySQL Database**
 Ensure that you have MySQL installed and running on your local machine. Create a database named `bookdb` (or another name of your choice):
