@@ -58,28 +58,30 @@ git clone https://github.com/Mrunal2308/Book-Store-Management.git
 
 Once the repository is cloned, navigate to the project directory:
 
-```bash
+````bash
 cd Book-Store-Management
-
+````
 
 
 ### 3. Create a Virtual Environment
 
 It's recommended to create a virtual environment to manage dependencies:
 
-```bash
+````bash
 python -m venv env
-
+````
 **Activate the virtual environment:**
 
 - **On Windows:**
 
-  ```bash
+  ````bash
   .\env\Scripts\activate
+  ````
 - **On macOS/Linux:**
 
-  ```bash
+  ````bash
   source env/bin/activate
+  ````
 
 
 
@@ -87,9 +89,9 @@ python -m venv env
 
 With the virtual environment activated, install the project dependencies:
 
-```bash
+````bash
 pip install -r requirements.txt
-
+````
 
 ### Configuration:
 
@@ -97,16 +99,16 @@ pip install -r requirements.txt
 
 Ensure that you have MySQL installed and running on your local machine. Create a database named `bookdb` (or another name of your choice):
 
-```sql
+````sql
 CREATE DATABASE bookdb;
-
+````
 
 
 ### 2. Modify the `settings.py` File
 
 Open the `settings.py` file located in the `Book-Store-Management/book_store_management/` directory and update the `DATABASES` configuration with your local MySQL credentials:
 
-```python
+````python
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
@@ -117,6 +119,7 @@ DATABASES = {
         'PASSWORD': 'your_mysql_password'
     }
 }
+````
 Replace `your_mysql_username` and `your_mysql_password` with your actual MySQL credentials.
 
 
@@ -124,17 +127,17 @@ Replace `your_mysql_username` and `your_mysql_password` with your actual MySQL c
 
 Apply the database migrations to set up the necessary tables:
 
-```bash
+````bash
 python manage.py migrate
-
+````
 
 ### Running the Application
 
 To run the Django development server, use the following command:
 
-```bash
+````bash
 python manage.py runserver
-
+````
 This will start the server at [http://127.0.0.1:8000/](http://127.0.0.1:8000/), where you can access the Book Store Management application.
 
 
