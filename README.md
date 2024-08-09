@@ -47,8 +47,9 @@ Follow these steps to set up the project on your local machine.
 ### 1. Clone the Repository
 
 Clone the repository to your local machine using the following command:
-git clone https://github.com/Mrunal2308/Book-Store-Management.git
 
+```bash
+git clone https://github.com/Mrunal2308/Book-Store-Management.git
 
 
 ### 2. Navigate to the Project Directory
