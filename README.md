@@ -57,8 +57,7 @@ Once the repository is cloned, navigate to the project directory:
 cd Book-Store-Management
 
 
-
-**3. Create a Virtual Environment**
+### 3. Create a Virtual Environment
 
 It's recommended to create a virtual environment to manage dependencies:
 python -m venv env
@@ -72,7 +71,7 @@ python -m venv env
 
 
 
-**4. Install Dependencies**
+### 4. Install Dependencies
 
 With the virtual environment activated, install the project dependencies:
 pip install -r requirements.txt
@@ -82,7 +81,7 @@ pip install -r requirements.txt
 
 
 
-**Configuration:**
+### Configuration:
 
 **1. Set Up the MySQL Database**
 Ensure that you have MySQL installed and running on your local machine. Create a database named `bookdb` (or another name of your choice):
@@ -90,7 +89,7 @@ CREATE DATABASE bookdb;
 
 
 
-**2. Modify the `settings.py` File**
+### 2. Modify the `settings.py` File
 
 Open the `settings.py` file located in the `Book-Store-Management/book_store_management/` directory and update the `DATABASES` configuration with your local MySQL credentials:
 DATABASES = {
@@ -107,13 +106,13 @@ Replace `your_mysql_username` and `your_mysql_password` with your actual MySQL c
 
 
 
-**3. Apply Migrations**
+### 3. Apply Migrations
 
 Apply the database migrations to set up the necessary tables:
 python manage.py migrate
 
 
-**Running the Application**
+### Running the Application
 
 To run the Django development server, use the following command:
 python manage.py runserver
@@ -121,7 +120,7 @@ python manage.py runserver
 This will start the server at [http://127.0.0.1:8000/](http://127.0.0.1:8000/), where you can access the Book Store Management application.
 
 
-**Usage**
+### Usage
 
 - **Sign Up**: Create a new user account by providing necessary details such as username, email, and password.
 
