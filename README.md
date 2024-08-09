@@ -55,7 +55,10 @@ git clone https://github.com/Mrunal2308/Book-Store-Management.git
 ### 2. Navigate to the Project Directory
 
 Once the repository is cloned, navigate to the project directory:
+
+```bash
 cd Book-Store-Management
+
 
 
 ### 3. Create a Virtual Environment
